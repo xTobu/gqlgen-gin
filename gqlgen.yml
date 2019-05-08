@@ -14,4 +14,4 @@ resolver:
   type: Resolver
 models:
   Todo:
-    model: github.com/xTobu/gqlgen-todos.Todo
+    model: github.com/xTobu/gqlgen-gin.Todo

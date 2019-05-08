@@ -1,4 +1,4 @@
-module github.com/xTobu/gqlgen-todos
+module github.com/xTobu/gqlgen-gin
 
 go 1.12
 

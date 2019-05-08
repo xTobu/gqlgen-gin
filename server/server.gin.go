@@ -4,8 +4,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/99designs/gqlgen/handler"
-	"github.com/xTobu/gqlgen-todos"
+	handler "github.com/99designs/gqlgen/handler"
+	"github.com/xTobu/gqlgen-gin"
 	"github.com/gin-gonic/gin"
 	"golang.org/x/net/context"
 )
@@ -13,7 +13,7 @@ import (
 // Handler initializes the graphql middleware.
 func Handler() gin.HandlerFunc {
 	// Creates a GraphQL-go HTTP handler with the defined schema
-	h := handler.GraphQL(gqlgen_todos.NewExecutableSchema(gqlgen_todos.Config{Resolvers: &gqlgen_todos.Resolver{}}))
+	h := handler.GraphQL(gqlgen_gin.NewExecutableSchema(gqlgen_gin.Config{Resolvers: &gqlgen_gin.Resolver{}}))
 
 	return func(c *gin.Context) {
 		h.ServeHTTP(c.Writer, c.Request)
